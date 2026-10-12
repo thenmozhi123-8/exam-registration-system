@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            background: #154360;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #2874a6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .delete {
+            background: #c0392b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #154360;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Admin Panel</h1>
+
+<div class="container">
+    <h2>Add Student Details</h2>
+
+    <input type="text" id="regno" placeholder="Register Number">
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="text" id="dept" placeholder="Department">
+    <input type="text" id="sem" placeholder="Semester">
+
+    <br>
+
+    <button onclick="addStudent()">Add Student</button>
+</div>
+
+<div class="container">
+    <h2>Student Registration Details</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Register No</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Semester</th>
+                <th>Payment</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentTable">
+            <tr>
+                <td>12345</td>
+                <td>Thenmozhi</td>
+                <td>B.Tech IT</td>
+                <td>5</td>
+                <td>Pending</td>
+                <td>
+                    <button class="delete"
+                    onclick="this.closest('tr').remove()">
+                    Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <button onclick="location.href='dashboard.html'">
+        Back to Dashboard
+    </button>
+</div>
+
+<script>
+function addStudent() {
+    let regno = document.getElementById("regno").value.trim();
+    let name = document.getElementById("name").value.trim();
+    let dept = document.getElementById("dept").value.trim();
+    let sem = document.getElementById("sem").value.trim();
+
+    if (regno === "" || name === "" || dept === "" || sem === "") {
+        alert("Please fill all details!");
+        return;
+    }
+
+    let table = document.getElementById("studentTable");
+    let row = table.insertRow();
+
+    [regno, name, dept, sem, "Pending"].forEach(function(value) {
+        let cell = row.insertCell();
+        cell.textContent = value;
+    });
+
+    let actionCell = row.insertCell();
+    let deleteButton = document.createElement("button");
+
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete";
+    deleteButton.onclick = function() {
+        row.remove();
+    };
+
+    actionCell.appendChild(deleteButton);
+
+    document.getElementById("regno").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("dept").value = "";
+    document.getElementById("sem").value = "";
+
+    alert("Student Added Successfully!");
+}
+</script>
+
+</body>
+</html>

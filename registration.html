@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4f46e5;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+
+        .subject {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f1f5f9;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 7px;
+        }
+
+        .subject input {
+            width: auto;
+            margin: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back {
+            background: #64748b;
+            margin-top: 12px;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Exam Registration</h1>
+        <p style="text-align:center;">Register for your semester examinations</p>
+
+        <form id="examForm">
+
+            <label>Student Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Register Number</label>
+            <input type="text" placeholder="Enter register number" required>
+
+            <label>Department</label>
+            <select required>
+                <option value="">Select Department</option>
+                <option>Information Technology</option>
+                <option>Computer Science</option>
+                <option>Electronics and Communication</option>
+            </select>
+
+            <label>Semester</label>
+            <select required>
+                <option value="">Select Semester</option>
+                <option>Semester 1</option>
+                <option>Semester 2</option>
+                <option>Semester 3</option>
+                <option>Semester 4</option>
+                <option>Semester 5</option>
+                <option>Semester 6</option>
+                <option>Semester 7</option>
+                <option>Semester 8</option>
+            </select>
+
+            <label>Select Subjects</label>
+
+            <div class="subject">
+                <input type="checkbox" name="subject" value="OOSE">
+                <span>CS24501 - OOSE</span>
+            </div>
+
+            <div class="subject">
+                <input type="checkbox" name="subject" value="MAD">
+                <span>CS24502 - MAD</span>
+            </div>
+
+            <div class="subject">
+                <input type="checkbox" name="subject" value="Software Testing">
+                <span>CS24P12 - Software Testing</span>
+            </div>
+
+            <div class="subject">
+                <input type="checkbox" name="subject" value="UI UX">
+                <span>CS24504 - UI/UX Design</span>
+            </div>
+
+            <button type="submit">Register for Exam</button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <button class="back" onclick="location.href='dashboard.html'">
+            Back to Dashboard
+        </button>
+
+    </div>
+
+    <script>
+        document.getElementById("examForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const selected = document.querySelectorAll('input[name="subject"]:checked');
+
+            if (selected.length === 0) {
+                document.getElementById("message").style.color = "red";
+                document.getElementById("message").textContent =
+                    "Please select at least one subject.";
+                return;
+            }
+
+            document.getElementById("message").style.color = "green";
+            document.getElementById("message").textContent =
+                "Exam Registration Successful!";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+
+* 
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const regno = document.getElementById("regno").value;
+    const password = document.getElementById("password").value;
+
+    if (regno === "12345" && password === "1234") {
+        window.location.href = "dashboard.html";
+    } else {
+        document.getElementById("message").textContent =
+            "Invalid Register Number or Password";
+    }
+});

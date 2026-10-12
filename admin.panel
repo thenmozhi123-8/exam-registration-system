@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eaf2f8;
+            margin: 0;
+        }
+        header {
+            background: #154360;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 25px;
+        }
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #bbb;
+        }
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background: #2874a6;
+            color: white;
+        }
+        button {
+            background: #154360;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Admin Panel</h1>
+    <p>Exam Registration System</p>
+</header>
+
+<div class="container">
+
+    <h2>Dashboard Overview</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Students</h3>
+            <h2>3</h2>
+        </div>
+
+        <div class="card">
+            <h3>Registered Students</h3>
+            <h2>2</h2>
+        </div>
+
+        <div class="card">
+            <h3>Pending Payments</h3>
+            <h2>1</h2>
+        </div>
+
+        <div class="card">
+            <h3>Hall Tickets</h3>
+            <h2>2</h2>
+        </div>
+    </div>
+
+    <h2>Student Registration Details</h2>
+
+    <table>
+        <tr>
+            <th>Register No</th>
+            <th>Student Name</th>
+            <th>Department</th>
+            <th>Semester</th>
+            <th>Payment</th>
+            <th>Hall Ticket</th>
+        </tr>
+
+        <tr>
+            <td>12345</td>
+            <td>Thenmozhi</td>
+            <td>B.Tech IT</td>
+            <td>5</td>
+            <td>Pending</td>
+            <td>Available</td>
+        </tr>
+
+        <tr>
+            <td>12346</td>
+            <td>Priya</td>
+            <td>B.Tech IT</td>
+            <td>5</td>
+            <td>Paid</td>
+            <td>Available</td>
+        </tr>
+
+        <tr>
+            <td>12347</td>
+            <td>Divya</td>
+            <td>B.Tech IT</td>
+            <td>5</td>
+            <td>Pending</td>
+            <td>Not Available</td>
+        </tr>
+    </table>
+
+    <br>
+    <button onclick="location.href='dashboard.html'">
+        Back to Dashboard
+    </button>
+
+</div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eaf2f8;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            background: #154360;
+            color: white;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 12px;
+        }
+        th {
+            background: #2874a6;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            background: #154360;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Admin Panel</h1>
+<h2>Student Registration Details</h2>
+
+<table>
+    <tr>
+        <th>Register No</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Semester</th>
+        <th>Payment</th>
+    </tr>
+    <tr>
+        <td>12345</td>
+        <td>Thenmozhi</td>
+        <td>B.Tech IT</td>
+        <td>5</td>
+        <td>Pending</td>
+    </tr>
+</table>
+
+<br>
+<button onclick="location.href='dashboard.html'">
+    Back to Dashboard
+</button>
+
+</body>
+</html>

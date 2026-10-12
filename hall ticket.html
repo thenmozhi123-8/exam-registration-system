@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Hall Ticket</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .ticket {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 35px;
+            border: 2px solid #4f46e5;
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #4f46e5;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+        }
+
+        .details {
+            margin-top: 25px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .back {
+            background: #64748b;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .ticket {
+                margin: 0;
+                border: 2px solid black;
+            }
+
+            .buttons {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ticket">
+
+        <h1>EXAM REGISTRATION SYSTEM</h1>
+        <h2>EXAM HALL TICKET</h2>
+        <p class="subtitle">Semester Examination - 2026</p>
+
+        <div class="details">
+
+            <div class="row">
+                <strong>Student Name</strong>
+                <span>Thenmozhi</span>
+            </div>
+
+            <div class="row">
+                <strong>Register Number</strong>
+                <span>12345</span>
+            </div>
+
+            <div class="row">
+                <strong>Department</strong>
+                <span>Information Technology</span>
+            </div>
+
+            <div class="row">
+                <strong>Semester</strong>
+                <span>Semester 5</span>
+            </div>
+
+        </div>
+
+        <h3>Examination Schedule</h3>
+
+        <table>
+            <tr>
+                <th>Subject Code</th>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+
+            <tr>
+                <td>CS24501</td>
+                <td>OOSE</td>
+                <td>15-10-2026</td>
+                <td>10:00 AM</td>
+            </tr>
+
+            <tr>
+                <td>CS24502</td>
+                <td>MAD</td>
+                <td>17-10-2026</td>
+                <td>10:00 AM</td>
+            </tr>
+
+            <tr>
+                <td>CS24P12</td>
+                <td>Software Testing</td>
+                <td>19-10-2026</td>
+                <td>10:00 AM</td>
+            </tr>
+        </table>
+
+        <div class="buttons">
+            <button onclick="window.print()">Download / Print Hall Ticket</button>
+
+            <button class="back" onclick="location.href='dashboard.html'">
+                Back to Dashboard
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hall Ticket</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eaf2f8;
+            text-align: center;
+            padding: 30px;
+        }
+        .ticket {
+            background: white;
+            border: 2px solid #333;
+            padding: 25px;
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 { color: #1a5276; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 15px;
+            background: #2874a6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="ticket">
+    <h1>COLLEGE EXAM HALL TICKET</h1>
+    <h3>Exam Registration System</h3>
+
+    <p><b>Name:</b> Thenmozhi</p>
+    <p><b>Register Number:</b> 12345</p>
+    <p><b>Department:</b> B.Tech IT</p>
+    <p><b>Semester:</b> 5</p>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Exam Date</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>Software Engineering</td>
+            <td>15-10-2026</td>
+            <td>10 AM - 1 PM</td>
+        </tr>
+        <tr>
+            <td>Computer Networks</td>
+            <td>17-10-2026</td>
+            <td>10 AM - 1 PM</td>
+        </tr>
+        <tr>
+            <td>DBMS</td>
+            <td>19-10-2026</td>
+            <td>10 AM - 1 PM</td>
+        </tr>
+    </table>
+
+    <button onclick="window.print()">Download / Print Hall Ticket</button>
+</div>
+
+</body>
+</html>

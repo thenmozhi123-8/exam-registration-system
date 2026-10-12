@@ -1,0 +1,609 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .card h3 {
+            color: #4f46e5;
+        }
+
+        button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        .logout {
+            background: #dc2626;
+            margin-top: 25px;
+            max-width: 150px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Exam Registration System</h1>
+        <p>Student Dashboard</p>
+    </header>
+
+    <div class="container">
+
+        <div class="welcome">
+            <h2>Welcome to Student Portal</h2>
+            <p>Register for your semester examinations online.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Exam Registration</h3>
+                <p>Register for your exams.</p>
+                <button onclick="alert('Exam Registration Page')">
+                    Register Now
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Exam Schedule</h3>
+                <p>View your examination dates.</p>
+                <button onclick="alert('Exam Schedule Page')">
+                    View Schedule
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Payment Details</h3>
+                <p>Check your examination fee details.</p>
+                <button onclick="alert('Payment Details Page')">
+                    View Payment
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Hall Ticket</h3>
+                <p>Access your examination hall ticket.</p>
+                <button onclick="alert('Hall Ticket Page')">
+                    View Hall Ticket
+                </button>
+            </div>
+
+        </div>
+
+        <center>
+            <button class="logout"
+                onclick="location.href='index.html'">
+                Logout
+            </button>
+        </center>
+
+    </div>
+
+    <footer>
+        © 2026 Exam Registration System
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .card h3 {
+            color: #4f46e5;
+        }
+
+        button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        .logout {
+            background: #dc2626;
+            margin-top: 25px;
+            max-width: 150px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Exam Registration System</h1>
+        <p>Student Dashboard</p>
+    </header>
+
+    <div class="container">
+
+        <div class="welcome">
+            <h2>Welcome to Student Portal</h2>
+            <p>Register for your semester examinations online.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Exam Registration</h3>
+                <p>Register for your exams.</p>
+                <button onclick="alert('Exam Registration Page')">
+                    Register Now
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Exam Schedule</h3>
+                <p>View your examination dates.</p>
+                <button onclick="alert('Exam Schedule Page')">
+                    View Schedule
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Payment Details</h3>
+                <p>Check your examination fee details.</p>
+                <button onclick="alert('Payment Details Page')">
+                    View Payment
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Hall Ticket</h3>
+                <p>Access your examination hall ticket.</p>
+                <button onclick="alert('Hall Ticket Page')">
+                    View Hall Ticket
+                </button>
+            </div>
+
+        </div>
+
+        <center>
+            <button class="logout"
+                onclick="location.href='index.html'">
+                Logout
+            </button>
+        </center>
+
+    </div>
+
+    <footer>
+        © 2026 Exam Registration System
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .card h3 {
+            color: #4f46e5;
+        }
+
+        button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        .logout {
+            background: #dc2626;
+            margin-top: 25px;
+            max-width: 150px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Exam Registration System</h1>
+        <p>Student Dashboard</p>
+    </header>
+
+    <div class="container">
+
+        <div class="welcome">
+            <h2>Welcome to Student Portal</h2>
+            <p>Register for your semester examinations online.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Exam Registration</h3>
+                <p>Register for your exams.</p>
+                <button onclick="alert('Exam Registration Page')">
+                    Register Now
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Exam Schedule</h3>
+                <p>View your examination dates.</p>
+                <button onclick="alert('Exam Schedule Page')">
+                    View Schedule
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Payment Details</h3>
+                <p>Check your examination fee details.</p>
+                <button onclick="alert('Payment Details Page')">
+                    View Payment
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Hall Ticket</h3>
+                <p>Access your examination hall ticket.</p>
+                <button onclick="alert('Hall Ticket Page')">
+                    View Hall Ticket
+                </button>
+            </div>
+
+        </div>
+
+        <center>
+            <button class="logout"
+                onclick="location.href='index.html'">
+                Logout
+            </button>
+        </center>
+
+    </div>
+
+    <footer>
+        © 2026 Exam Registration System
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px #ddd;
+        }
+
+        .card h3 {
+            color: #4f46e5;
+        }
+
+        button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        .logout {
+            background: #dc2626;
+            margin-top: 25px;
+            max-width: 150px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Exam Registration System</h1>
+        <p>Student Dashboard</p>
+    </header>
+
+    <div class="container">
+
+        <div class="welcome">
+            <h2>Welcome to Student Portal</h2>
+            <p>Register for your semester examinations online.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Exam Registration</h3>
+                <p>Register for your exams.</p>
+                <button onclick="alert('Exam Registration Page')">
+                    Register Now
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Exam Schedule</h3>
+                <p>View your examination dates.</p>
+             <button onclick="location.href='schedule.html'">
+    View Schedule
+</button>   
+            </div>
+
+            <div class="card">
+                <h3>Payment Details</h3>
+                <p>Check your examination fee details.</p>
+          <button onclick="location.href='payment.html'">
+    View Payment
+</button>      
+            </div>
+<button onclick="location.href='registration.html'">
+    Register Now
+</button>
+            <div class="card">
+                <h3>Hall Ticket</h3>
+                <p>Access your examination hall ticket.</p>
+                
+            </div>
+
+        </div>
+
+        <center>
+            <button class="logout"
+                onclick="location.href='index.html'">
+                Logout
+            </button>
+        </center>
+
+    </div>
+
+    <footer>
+        © 2026 Exam Registration System
+    </footer>
+
+</body>
+
